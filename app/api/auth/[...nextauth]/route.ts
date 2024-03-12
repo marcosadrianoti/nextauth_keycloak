@@ -66,7 +66,10 @@ export const authOptions: NextAuthOptions = {
 
       await fetch(logOutUrl);
     },
-  }
+  },
+  // pages: {
+  //   signIn: '/login', // É redirecionado corretamente, mas o nextauth não envia os dados para o keycloak
+  // }
 }
 
 const handlerNextAuth = NextAuth(authOptions);

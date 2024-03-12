@@ -13,6 +13,8 @@ export const LoginForm = () => {
   const handleLogin = async (e: React.FormEvent) => { // É assincrona porque enviar dados para o formulário padrão do NextAuth
     e.preventDefault();
     try {
+      // signIn('keycloak', { callbackUrl: '/public'}); // não funciona
+
       const response = await signIn('credentials', {
         email,
         password,
