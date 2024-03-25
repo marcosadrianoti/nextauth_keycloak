@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  keycloak:
+    build: 
+      context: .
+    image: my-keycloak-image
+    ports:
+      - "8080:8080"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    volumes:
+      - /mnt/6E6CF9236CF8E6AD/www/keycloak_themes:/opt/keycloak/themes
